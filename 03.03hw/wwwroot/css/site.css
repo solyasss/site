@@ -1,0 +1,35 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffe4ec;
+}
+
+.pastel-card {
+  border: 2px solid #ffc0cb;
+  border-radius: 10px;
+  background-color: #fff0f6; 
+}
+
+.poster-box {
+  width: 120px;
+  height: auto;
+}
+
+.movie-poster {
+  max-width: 100%;
+  max-height: 180px;
+  border-radius: 5px;
+  border: 2px solid #ffc0cb;
+}
+
+.info-box {
+  max-width: 250px;
+}
+
+h1, h5 {
+  color: #d63384; 
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.3rem;
+}

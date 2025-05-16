@@ -1,0 +1,27 @@
+@model _03._03hw.Models.movie
+@{
+    ViewData["Title"] = "Delete Movie";
+}
+
+<div class="container my-4">
+    <h1 class="mb-4">Delete Movie</h1>
+    <p>Are you sure you want to delete the following movie?</p>
+
+    <div class="row pastel-card p-3">
+        <div class="col-md-3">
+            <img src="@Model.poster" alt="@Model.title poster" class="img-fluid movie-poster" />
+        </div>
+        <div class="col-md-9">
+            <h5>@Model.title (@Model.year)</h5>
+            <p><strong>director:</strong> @Model.director</p>
+            <p><strong>genre:</strong> @Model.genre</p>
+            <p>@Model.description</p>
+        </div>
+    </div>
+
+    <form asp-action="delete" method="post" class="mt-3">
+        <input type="hidden" asp-for="id" />
+        <button type="submit" class="btn btn-danger">delete</button>
+        <a asp-controller="movies" asp-action="index" class="btn btn-secondary ml-2">cancel</a>
+    </form>
+</div>

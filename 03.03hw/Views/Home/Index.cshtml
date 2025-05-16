@@ -1,0 +1,33 @@
+﻿@model IEnumerable<_03._03hw.Models.movie>
+@{
+    ViewData["Title"] = "Pink Paradise Movies";
+}
+
+<div class="container my-4">
+    <div class="text-right mb-4">
+        <a asp-controller="Movies" asp-action="index" class="btn btn-info">
+            CRUD operations
+        </a>
+    </div>
+    
+    
+    <h1 class="text-center mb-5">Top 10 Pinkish Movie Picks</h1>
+    <div class="row justify-content-center">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-5 m-2 p-3 pastel-card">
+                <div class="d-flex flex-row">
+                    <div class="poster-box">
+                        <img src="@item.poster" alt="@item.title poster" class="img-fluid movie-poster" />
+                    </div>
+                    <div class="info-box ml-3">
+                        <h5 class="mb-1">@item.title (@item.year)</h5>
+                        <p class="mb-1"><strong>Director:</strong> @item.director</p>
+                        <p class="mb-1"><strong>Genre:</strong> @item.genre</p>
+                        <p class="mb-1">@item.description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

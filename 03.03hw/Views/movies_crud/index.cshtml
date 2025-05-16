@@ -1,0 +1,43 @@
+@model IEnumerable<_03._03hw.Models.movie>
+@{
+    ViewData["Title"] = "All Movies";
+}
+
+<div class="container my-4">
+    <h1 class="text-center mb-4">Movies List</h1>
+
+    <div class="text-right mb-3">
+        <a asp-controller="movies" asp-action="create" class="btn btn-success btn-sm">
+            add new movie
+        </a>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <p class="text-center">no movies in the database</p>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+            <div class="col-md-12 p-2 pastel-card mb-3">
+                <div class="d-flex flex-row">
+                    <div class="poster-box">
+                        <img src="@item.poster" alt="@item.title poster" class="img-fluid movie-poster" />
+                    </div>
+                    <div class="info-box ml-3">
+                        <h5 class="mb-1">@item.title (@item.year)</h5>
+                        <p class="mb-1"><strong>director:</strong> @item.director</p>
+                        <p class="mb-1"><strong>genre:</strong> @item.genre</p>
+                        <p class="mb-1">@item.description</p>
+                        <div class="mt-2">
+                            <a asp-controller="movies" asp-action="details" asp-route-id="@item.id" class="btn btn-primary btn-sm mr-2">details</a>
+                            <a asp-controller="movies" asp-action="edit" asp-route-id="@item.id" class="btn btn-warning btn-sm mr-2">edit</a>
+                            <a asp-controller="movies" asp-action="delete" asp-route-id="@item.id" class="btn btn-danger btn-sm">delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

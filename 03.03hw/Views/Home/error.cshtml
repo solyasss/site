@@ -1,0 +1,10 @@
+@model _03._03hw.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Oops, something went wrong.</h1>
+@if (Model.show_request_id)
+{
+    <p>Request ID: <code>@Model.request_id</code></p>
+}

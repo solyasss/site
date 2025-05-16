@@ -1,0 +1,47 @@
+@model _03._03hw.Models.movie
+@{
+    ViewData["Title"] = "Add New Movie";
+}
+
+<div class="container my-4">
+    <h1 class="mb-4">Add New Movie</h1>
+
+    <form asp-action="create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="title"></label>
+            <input asp-for="title" class="form-control" />
+            <span asp-validation-for="title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="director"></label>
+            <input asp-for="director" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="genre"></label>
+            <input asp-for="genre" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="year"></label>
+            <input asp-for="year" class="form-control" />
+        </div>
+        
+
+        <div class="form-group">
+            <label>Upload Poster</label>
+            <input type="file" name="uploaded_poster" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="description"></label>
+            <textarea asp-for="description" class="form-control"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">save</button>
+        <a asp-controller="Movies" asp-action="index" class="btn btn-secondary">cancel</a>
+    </form>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

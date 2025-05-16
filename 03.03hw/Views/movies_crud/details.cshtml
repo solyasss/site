@@ -1,0 +1,21 @@
+@model _03._03hw.Models.movie
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<div class="container my-4">
+    <h1 class="mb-4">@Model.title (@Model.year)</h1>
+    <div class="row">
+        <div class="col-md-10 pastel-card">
+            <img src="@Model.poster" alt="@Model.title poster" class="img-fluid movie-poster m-3" />
+            <p><strong>director:</strong> @Model.director</p>
+            <p><strong>genre:</strong> @Model.genre</p>
+            <p>@Model.description</p>
+            <hr/>
+        </div>
+        <div class="col-md-2">
+           
+            <a asp-controller="movies" asp-action="index" class="btn btn-secondary btn-sm">back to list</a>
+        </div>
+    </div>
+</div>
