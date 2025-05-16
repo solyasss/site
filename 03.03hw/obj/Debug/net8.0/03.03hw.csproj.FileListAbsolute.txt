@@ -260,3 +260,4 @@ D:\Desktop\03.03-master\03.03hw\obj\Debug\net8.0\refint\03.03hw.dll
 D:\Desktop\03.03-master\03.03hw\obj\Debug\net8.0\03.03hw.pdb
 D:\Desktop\03.03-master\03.03hw\obj\Debug\net8.0\03.03hw.genruntimeconfig.cache
 D:\Desktop\03.03-master\03.03hw\obj\Debug\net8.0\ref\03.03hw.dll
+D:\Desktop\03.03-master\03.03hw\obj\Debug\net8.0\03.03hw.sourcelink.json
